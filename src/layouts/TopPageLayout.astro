@@ -1,0 +1,27 @@
+---
+import "../styles/destyle.css";
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{title}</title>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+    <style>
+      main {
+        width: 400px;
+        margin: 100px auto;
+        text-align: center;
+      }
+    </style>
+  </body>
+</html>
